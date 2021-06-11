@@ -16,7 +16,7 @@ class StartScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 44.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const <Widget>[],
+              children: const <Widget>[Text("data")],
             ),
           ),
         ),

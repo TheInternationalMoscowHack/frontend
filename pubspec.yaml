@@ -63,15 +63,15 @@ flutter:
   fonts:
     - family: Helvetica
       fonts:
-        - asset: assets/fonts/Helvetica-Thin.ttf
+        - asset: lib/assets/fonts/Helvetica-Thin.ttf
           weight: 300
-        - asset: fonts/Helvetica-Regular.ttf
+        - asset: lib/assets/fonts/Helvetica-Regular.ttf
           weight: 400
-        - asset: fonts/Helvetica-Medium.ttf
+        - asset: lib/assets/fonts/Helvetica-Medium.ttf
           weight: 500
-        - asset: fonts/Helvetica-Heavy.ttf
+        - asset: lib/assets/fonts/Helvetica-Heavy.ttf
           weight: 700
-        - asset: fonts/Helvetica-Bold.ttf
+        - asset: lib/assets/fonts/Helvetica-Bold.ttf
           weight: 600 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
