@@ -26,6 +26,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'MosRu',
       // theme: AppThemes.mainTheme,
+      // запуск стартового экрана без использования темы
       home: const StartScreen(),
     );
   }

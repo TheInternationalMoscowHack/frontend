@@ -16,13 +16,16 @@ class StartScreen extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 44.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 44.0, vertical: 25.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: const <Widget>[
-                //LogoWidget(),
+                LogoWidget(),
+                // LogoWodget использует png из за проблем с svg  файлом
+                // флатерская библиотека просто не может его нормально отрисовать
                 SizedBox(height: 32.0),
-                //TitleWidget(),
+                TitleWidget(),
                 SizedBox(height: 24.0),
                 CircularIndicatorWidget(),
               ],
