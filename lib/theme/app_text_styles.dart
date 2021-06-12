@@ -46,5 +46,47 @@ class AppTextStyles {
     color: AppColors.lightGray,
   );
 
+  static const TextStyle questionbig = TextStyle(
+    fontFamily: 'Helvetica',
+    fontStyle: FontStyle.normal,
+    fontWeight: FontWeight.w700,
+    fontSize: 25.0,
+    fontFeatures: <FontFeature>[
+      // pnum
+      FontFeature.proportionalFigures(),
+      // lnum
+      FontFeature.liningFigures(),
+    ],
+    color: AppColors.black,
+  );
+
+  static const TextStyle other_question = TextStyle(
+    fontFamily: 'Helvetica',
+    //fontStyle: FontStyle.normal,
+    fontWeight: FontWeight.w400,
+    fontSize: 17.0,
+    fontFeatures: <FontFeature>[
+      // pnum
+      FontFeature.proportionalFigures(),
+      // lnum
+      FontFeature.liningFigures(),
+    ],
+    color: AppColors.lightGray,
+  );
+
+  static const TextStyle current_question = TextStyle(
+    fontFamily: 'Helvetica',
+    fontStyle: FontStyle.normal,
+    fontWeight: FontWeight.w700,
+    fontSize: 17.0,
+    fontFeatures: <FontFeature>[
+      // pnum
+      FontFeature.proportionalFigures(),
+      // lnum
+      FontFeature.liningFigures(),
+    ],
+    color: AppColors.actGreen,
+  );
+
   const AppTextStyles._();
 }
