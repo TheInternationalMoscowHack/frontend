@@ -10,9 +10,14 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // Hive.initFlutter();
   await Hive.initFlutter();
-  var box = await Hive.openBox('testBox');
-  box.put('name', 'David');
-  print('Name: ${box.get('name')}');
+  // Hive - наша база данных, в которой будут зраниться несколько листов
+  // User - лист содержащий инфу о пользователе, не предполагается что он будет часто обновляться
+  // Events - лист содержащий информацию о собтиях, будет обновлятья с каждым входом
+
+  // подобное описание можной найти в описании
+  // var box = await Hive.openBox('testBox');
+  // box.put('name', 'David');
+  // print('Name: ${box.get('name')}');
 
   // var box = await Hive.openBox('testBox');
   await SystemChrome.setPreferredOrientations(
