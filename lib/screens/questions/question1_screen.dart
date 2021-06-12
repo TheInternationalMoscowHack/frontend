@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:mos_ru_app/screens/common_widgets/answer_button.dart';
+import 'package:mos_ru_app/screens/common_widgets/little_header.dart';
 import 'package:mos_ru_app/screens/common_widgets/magic_button.dart';
 import 'package:mos_ru_app/screens/common_widgets/rounded_button.dart';
-import 'package:mos_ru_app/screens/questions/question1_screen.dart';
 import 'package:mos_ru_app/screens/start/widgets/circular_indicator.dart';
 import 'package:mos_ru_app/screens/start/widgets/logo_widget.dart';
 import 'package:mos_ru_app/screens/start/widgets/title_widget.dart';
 import 'package:mos_ru_app/theme/app_colors.dart';
 
-class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({
+class Question1Screen extends StatelessWidget {
+  const Question1Screen({
     Key? key,
   }) : super(key: key);
 
@@ -26,29 +26,24 @@ class WelcomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 SizedBox(
-                  height: 150,
+                  height: 10,
                 ),
-                MagicButton(
-                  text: "Подбери события",
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute<void>(
-                        builder: (_) => const Question1Screen(),
-                      ),
-                    );
-                  },
+                LittleHeaderWidget(),
+                AnswerButton(
+                  text: "Вопрос 1",
                 ),
                 SizedBox(
                   height: 30,
                 ),
-                RoundedButton(
-                  text: "Покажи что есть",
+                AnswerButton(
+                  text: "Вопрос 2",
                 ),
                 SizedBox(
                   height: 30,
                 ),
-                AnswerButton(text: "Вопрос 1"),
+                AnswerButton(
+                  text: "Вопрос 3",
+                ),
               ],
             ),
           ),
