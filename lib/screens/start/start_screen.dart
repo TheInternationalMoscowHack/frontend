@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mos_ru_app/screens/common_widgets/magic_button.dart';
 import 'package:mos_ru_app/screens/common_widgets/rounded_button.dart';
+import 'package:hive/hive.dart';
 import 'package:mos_ru_app/screens/start/widgets/circular_indicator.dart';
 import 'package:mos_ru_app/screens/start/widgets/logo_widget.dart';
 import 'package:mos_ru_app/screens/start/widgets/title_widget.dart';
@@ -44,11 +45,25 @@ class StartScreen extends StatelessWidget {
                   },
                 ),
                 SizedBox(height: 24.0),
+                // Прверили шрифты. все норм
                 IconButton(
                   icon: new Icon(Icons.add),
-                  onPressed: () {
-                    print("add");
+                  onPressed: () async {
+                    var box = await Hive.openBox('testBox');
+                    if (box.isEmpty) {
+                      print('box_is_empty');
+                      box.put('name', 'Basil');
+                      box.put('age', 12);
+                    } else {
+                      print(
+                          'in start screen name: ${box.get('name')} ${box.get('age')}');
+                      box.clear();
+                    }
                   },
+                ),
+                Container(
+                  color: Colors.grey[100],
+                  width: 600,
                 )
               ],
             ),

@@ -1,6 +1,6 @@
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+// import 'package:flutter_svg/svg.dart';
 
 class CircularIndicatorWidget extends StatelessWidget {
   const CircularIndicatorWidget({
