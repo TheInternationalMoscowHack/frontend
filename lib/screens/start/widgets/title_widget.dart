@@ -11,24 +11,27 @@ class TitleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 100,
-      width: 300,
-      child: Row(
-        children: [
-          Text(
-            'Досуг в несколько касаний',
-            textAlign: TextAlign.center,
-            style: AppTextStyles.header,
-          ),
-          SizedBox(
-            width: 10,
-          ),
-          Container(
-              width: 25,
-              height: 25,
-              child: SvgPicture.asset(AppSvgIcons.magic_wand))
-        ],
+    return Center(
+      child: Container(
+        height: 100,
+        width: 300,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Досуг в несколько касаний',
+              textAlign: TextAlign.center,
+              style: AppTextStyles.header,
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Container(
+                width: 25,
+                height: 25,
+                child: SvgPicture.asset(AppSvgIcons.magic_wand_red))
+          ],
+        ),
       ),
     );
   }

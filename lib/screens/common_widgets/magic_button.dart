@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:mos_ru_app/resourses/app_svg_icons.dart';
 
 import 'package:mos_ru_app/theme/app_colors.dart';
 import 'package:mos_ru_app/theme/app_text_styles.dart';
 
-class RoundedButton extends StatelessWidget {
+class MagicButton extends StatelessWidget {
   final String text;
   final double borderRadius;
   final Function()? onTap;
@@ -11,7 +13,7 @@ class RoundedButton extends StatelessWidget {
   final TextStyle? textStyle;
   final EdgeInsets? padding;
 
-  const RoundedButton({
+  const MagicButton({
     required this.text,
     this.borderRadius = 4.0,
     this.onTap,
@@ -41,12 +43,25 @@ class RoundedButton extends StatelessWidget {
                 horizontal: 16.0,
               ),
           child: Center(
-            child: Text(
-              text,
-              style: textStyle ??
-                  AppTextStyles.buttonheavy.copyWith(
-                    color: AppColors.bigWhite,
-                  ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  text,
+                  style: textStyle ??
+                      AppTextStyles.buttonheavy.copyWith(
+                        color: AppColors.bigWhite,
+                      ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Container(
+                    width: 25,
+                    height: 25,
+                    child: SvgPicture.asset(AppSvgIcons.magic_wand_white)),
+              ],
             ),
           ),
         ),

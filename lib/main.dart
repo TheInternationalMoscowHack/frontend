@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:mos_ru_app/screens/start/start_screen.dart';
-import 'package:mos_ru_app/theme/app_themes.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

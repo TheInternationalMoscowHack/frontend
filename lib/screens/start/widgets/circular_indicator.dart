@@ -9,20 +9,22 @@ class CircularIndicatorWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new CircularPercentIndicator(
-      radius: 130.0,
-      animation: true,
-      animationDuration: 1200,
-      lineWidth: 5.0,
-      percent: 0.4,
-      // center: new Text(
-      //   "40 hours",
-      //   style:
-      //       new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
-      // ),
-      circularStrokeCap: CircularStrokeCap.butt,
-      backgroundColor: Colors.grey,
-      progressColor: Colors.red,
+    return Center(
+      child: new CircularPercentIndicator(
+        radius: 130.0,
+        animation: true,
+        animationDuration: 12000,
+        lineWidth: 3.0,
+        percent: 0.4,
+        // center: new Text(
+        //   "40 hours",
+        //   style:
+        //       new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+        // ),
+        circularStrokeCap: CircularStrokeCap.butt,
+        backgroundColor: Colors.grey,
+        progressColor: Colors.red,
+      ),
     );
   }
 }

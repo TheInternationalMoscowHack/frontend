@@ -18,6 +18,20 @@ class AppTextStyles {
     color: AppColors.redMain,
   );
 
+  static const TextStyle buttonheavy = TextStyle(
+    fontFamily: 'Helvetica',
+    //fontStyle: FontStyle.normal,
+    fontWeight: FontWeight.w700,
+    fontSize: 17.0,
+    fontFeatures: <FontFeature>[
+      // pnum
+      FontFeature.proportionalFigures(),
+      // lnum
+      FontFeature.liningFigures(),
+    ],
+    color: AppColors.redMain,
+  );
+
   static const TextStyle titleSmall = TextStyle(
     fontFamily: 'Helvetica',
     fontStyle: FontStyle.normal,
