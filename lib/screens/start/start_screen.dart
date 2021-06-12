@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
 import 'package:mos_ru_app/screens/start/widgets/circular_indicator.dart';
 import 'package:mos_ru_app/screens/start/widgets/logo_widget.dart';
 import 'package:mos_ru_app/screens/start/widgets/title_widget.dart';
@@ -28,10 +29,11 @@ class StartScreen extends StatelessWidget {
                 TitleWidget(),
                 SizedBox(height: 24.0),
                 CircularIndicatorWidget(),
+                // Прверили шрифты. все норм
                 IconButton(
                   icon: new Icon(Icons.add),
-                  onPressed: () {
-                    print("add");
+                  onPressed: () async {
+                    // print("add");
                   },
                 )
               ],
