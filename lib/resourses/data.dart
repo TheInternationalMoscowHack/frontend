@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 
+// part 'user.g.dart';
+
 @HiveType(typeId: 1)
 class User {
   User({required this.id, required this.token});

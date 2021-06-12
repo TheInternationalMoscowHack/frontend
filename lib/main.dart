@@ -5,11 +5,20 @@ import "package:hive_flutter/hive_flutter.dart";
 
 import 'package:mos_ru_app/screens/start/start_screen.dart';
 import 'package:mos_ru_app/theme/app_themes.dart';
+import 'package:mos_ru_app/resourses/data.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // Hive.initFlutter();
   await Hive.initFlutter();
+  var box = await Hive.openBox('dataUser');
+  if (box.isEmpty) {
+    // описываем метод получения данных пользователя
+    var _person = User(id: BigInt.from(1), token: 'a');
+    box.add(_person);
+  }
+
+  // var box
   // Hive - наша база данных, в которой будут зраниться несколько листов
   // User - лист содержащий инфу о пользователе, не предполагается что он будет часто обновляться
   // Events - лист содержащий информацию о собтиях, будет обновлятья с каждым входом

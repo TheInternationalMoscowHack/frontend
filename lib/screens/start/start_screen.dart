@@ -34,8 +34,16 @@ class StartScreen extends StatelessWidget {
                   icon: new Icon(Icons.add),
                   onPressed: () async {
                     var box = await Hive.openBox('testBox');
-                    print(
-                        'in start screen name: ${box.get('name')} ${box.get('age')}');
+                    if (box.isEmpty) {
+                      print('box_is_empty');
+                      box.put('naem', 'Basil');
+                      box.put('age', 12);
+                    } else {
+                      print(
+                          'in start screen name: ${box.get('name')} ${box.get('age')}');
+                      box.clear();
+                    }
+                    // await box.close();
                     // box.put('age', 12);
 
                     // print("add");
