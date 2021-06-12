@@ -6,9 +6,9 @@ import 'package:mos_ru_app/theme/app_colors.dart';
 class AppTextStyles {
   static const TextStyle header = TextStyle(
     fontFamily: 'Helvetica',
-    fontStyle: FontStyle.normal,
+    //fontStyle: FontStyle.normal,
     fontWeight: FontWeight.w700,
-    fontSize: 36.0,
+    fontSize: 17.0,
     fontFeatures: <FontFeature>[
       // pnum
       FontFeature.proportionalFigures(),
