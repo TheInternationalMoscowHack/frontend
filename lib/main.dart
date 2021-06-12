@@ -11,13 +11,16 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // Hive.initFlutter();
   await Hive.initFlutter();
-  var box = await Hive.openBox('dataUser');
-  if (box.isEmpty) {
+  var box_user = await Hive.openBox('dataUser');
+  if (box_user.isEmpty) {
     // описываем метод получения данных пользователя
     var _person = User(id: BigInt.from(1), token: 'a');
-    box.add(_person);
+    box_user.add(_person);
   }
-
+  var box_events = await Hive.openBox('dataUser');
+  {
+    // код ддля обновления базы данных всех ивентов
+  }
   // var box
   // Hive - наша база данных, в которой будут зраниться несколько листов
   // User - лист содержащий инфу о пользователе, не предполагается что он будет часто обновляться
