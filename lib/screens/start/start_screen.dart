@@ -20,7 +20,7 @@ class StartScreen extends StatelessWidget {
                 const EdgeInsets.symmetric(horizontal: 44.0, vertical: 25.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
-              children: const <Widget>[
+              children: <Widget>[
                 LogoWidget(),
                 // LogoWodget использует png из за проблем с svg  файлом
                 // флатерская библиотека просто не может его нормально отрисовать
@@ -28,6 +28,12 @@ class StartScreen extends StatelessWidget {
                 TitleWidget(),
                 SizedBox(height: 24.0),
                 CircularIndicatorWidget(),
+                IconButton(
+                  icon: new Icon(Icons.add),
+                  onPressed: () {
+                    print("add");
+                  },
+                )
               ],
             ),
           ),
