@@ -7,7 +7,7 @@ class AppTextStyles {
   static const TextStyle header = TextStyle(
     fontFamily: 'Helvetica',
     //fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
+    fontWeight: FontWeight.w400,
     fontSize: 17.0,
     fontFeatures: <FontFeature>[
       // pnum

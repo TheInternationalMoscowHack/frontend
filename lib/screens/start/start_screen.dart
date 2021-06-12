@@ -24,7 +24,7 @@ class StartScreen extends StatelessWidget {
                 LogoWidget(),
                 // LogoWodget использует png из за проблем с svg  файлом
                 // флатерская библиотека просто не может его нормально отрисовать
-                SizedBox(height: 32.0),
+                // SizedBox(height: 32.0),
                 TitleWidget(),
                 SizedBox(height: 24.0),
                 CircularIndicatorWidget(),
