@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mos_ru_app/theme/app_colors.dart';
 
+// ПОКА НЕ ИСПОЛЬЗУЕТСЯ НИКАК
 class StepsIndicator extends StatelessWidget {
   final int totalNumber;
   final int currentNumber;

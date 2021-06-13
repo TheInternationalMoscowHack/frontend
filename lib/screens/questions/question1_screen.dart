@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mos_ru_app/screens/common_widgets/answer_button.dart';
-import 'package:mos_ru_app/screens/common_widgets/little_header.dart';
+import 'package:mos_ru_app/screens/questions/widgets/answer_button.dart';
+import 'package:mos_ru_app/screens/questions/widgets/little_header.dart';
 import 'package:mos_ru_app/screens/common_widgets/magic_button.dart';
-import 'package:mos_ru_app/screens/common_widgets/question_indicator.dart';
+import 'package:mos_ru_app/screens/questions/widgets/question_indicator.dart';
 import 'package:mos_ru_app/screens/common_widgets/rounded_button.dart';
-import 'package:mos_ru_app/screens/common_widgets/steps_indicator.dart';
+import 'package:mos_ru_app/screens/questions/widgets/steps_indicator.dart';
 import 'package:mos_ru_app/screens/start/widgets/circular_indicator.dart';
 import 'package:mos_ru_app/screens/start/widgets/logo_widget.dart';
 import 'package:mos_ru_app/screens/start/widgets/title_widget.dart';
@@ -39,7 +39,7 @@ class Question1Screen extends StatelessWidget {
                 SizedBox(
                   height: 5,
                 ),
-                StepsIndicator(currentNumber: 0, totalNumber: 4),
+                //StepsIndicator(currentNumber: 0, totalNumber: 4),
                 SizedBox(
                   height: 10,
                 ),
