@@ -106,7 +106,7 @@ class AppTextStyles {
     fontFamily: 'Helvetica',
     fontStyle: FontStyle.normal,
     fontWeight: FontWeight.w500,
-    fontSize: 14.0,
+    fontSize: 10.0,
     fontFeatures: <FontFeature>[
       // pnum
       FontFeature.proportionalFigures(),

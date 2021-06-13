@@ -39,7 +39,6 @@ class Question1Screen extends StatelessWidget {
                 SizedBox(
                   height: 5,
                 ),
-                //StepsIndicator(currentNumber: 0, totalNumber: 4),
                 SizedBox(
                   height: 10,
                 ),
@@ -66,6 +65,10 @@ class Question1Screen extends StatelessWidget {
                 AnswerButton(
                   text: "Вопрос 3",
                 ),
+                SizedBox(
+                  height: 50,
+                ),
+                Row()
               ],
             ),
           ),
