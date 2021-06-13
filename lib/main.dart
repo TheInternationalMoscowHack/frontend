@@ -14,9 +14,18 @@ Future<void> main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(UserAdapter());
   Hive.registerAdapter(EventAdapter());
-  // Hive.registerAdapter(UserAdapter());
+  // // Hive.registerAdapter(UserAdapter());
   await getUser();
-  await getEvents();
+  // await getEvents();
+
+  // final url = Uri.parse('https://events-hack.herokuapp.com/api/v1/events/1/');
+  // http.Response response = await http.get(url);
+  // print('Status code: ${response.statusCode}');
+  // print('Headers: ${response.headers}');
+  // print('Body: ${response.body}');
+  // Map<String, dynamic> event = json.decode(utf8.decode(response.bodyBytes));
+  // print(event['results'][0]['title']);
+
   // var box
   // Hive - наша база данных, в которой будут зраниться несколько листов
   // User - лист содержащий инфу о пользователе, не предполагается что он будет часто обновляться

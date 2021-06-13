@@ -19,17 +19,20 @@ class UserAdapter extends TypeAdapter<User> {
     return User(
       id: fields[0] as int,
       token: fields[1] as String,
+      answer: fields[2] as String,
     );
   }
 
   @override
   void write(BinaryWriter writer, User obj) {
     writer
-      ..writeByte(2)
+      ..writeByte(3)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
-      ..write(obj.token);
+      ..write(obj.token)
+      ..writeByte(2)
+      ..write(obj.answer);
   }
 
   @override
@@ -54,11 +57,11 @@ class EventAdapter extends TypeAdapter<Event> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return Event(
-      id: fields[0] as int,
-      title: fields[1] as String,
-      status: fields[2] as bool,
-      text: fields[3] as String,
-      image: fields[4] as String,
+      location: fields[0] as String,
+      time: fields[1] as String,
+      image: fields[2] as String,
+      title: fields[3] as String,
+      description: fields[4] as String,
     );
   }
 
@@ -67,15 +70,15 @@ class EventAdapter extends TypeAdapter<Event> {
     writer
       ..writeByte(5)
       ..writeByte(0)
-      ..write(obj.id)
+      ..write(obj.location)
       ..writeByte(1)
-      ..write(obj.title)
+      ..write(obj.time)
       ..writeByte(2)
-      ..write(obj.status)
+      ..write(obj.image)
       ..writeByte(3)
-      ..write(obj.text)
+      ..write(obj.title)
       ..writeByte(4)
-      ..write(obj.image);
+      ..write(obj.description);
   }
 
   @override
