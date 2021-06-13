@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mos_ru_app/resourses/app_svg_icons.dart';
+import 'package:mos_ru_app/resourses/data.dart';
 import 'package:mos_ru_app/theme/app_text_styles.dart';
 
 class EventCard extends StatelessWidget {
-  final String name;
+  final Event event;
 
-  const EventCard({Key? key, required this.name}) : super(key: key);
+  const EventCard({Key? key, required this.event}) : super(key: key);
 
   @override
   Widget build(
@@ -36,8 +37,8 @@ class EventCard extends StatelessWidget {
                           fit: BoxFit.fitWidth,
                           alignment: FractionalOffset.topCenter,
                           image: NetworkImage(
-                            'https://picsum.photos/250?image=9',
-                          ))),
+                              event.image //'https://picsum.photos/250?image=9',
+                              ))),
                 ),
               ),
             ),
@@ -47,7 +48,7 @@ class EventCard extends StatelessWidget {
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                '   ' + name,
+                '   ' + event.title,
                 style: AppTextStyles.cardheader,
               ),
             ),
@@ -66,12 +67,12 @@ class EventCard extends StatelessWidget {
                   width: 5,
                 ),
                 Text(
-                  'Локация',
+                  event.location,
                   style: AppTextStyles.carddetails,
                 ),
                 Spacer(),
                 Text(
-                  'Время',
+                  event.time,
                   style: AppTextStyles.carddetails,
                 ),
                 SizedBox(
