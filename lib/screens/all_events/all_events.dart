@@ -38,10 +38,11 @@ import 'package:mos_ru_app/theme/app_colors.dart';
 //   ),
 
 //  boxEvents.get(i), i до 19
+List<Event> eventslist = [];
 Future<dynamic> allevents() async {
   var boxEvents = await Hive.openBox('Events');
-  var AllEventsList = [for (var i = 0; i < 20; i++) boxEvents.get(i)];
-  return AllEventsList;
+  // var allEventsList = ;
+  eventslist = [for (var i = 0; i < 20; i++) boxEvents.get(i)];
 }
 
 class AllEventsScreen extends StatelessWidget {
@@ -51,7 +52,7 @@ class AllEventsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Future<dynamic> eventslist = allevents();
+    // Future<dynamic> eventslist = allevents();
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
@@ -82,7 +83,7 @@ class AllEventsScreen extends StatelessWidget {
                         SizedBox(
                           height: 10,
                         ),
-                        eventslist[i],
+                        eventslist[i].image,
                         SizedBox(
                           height: 10,
                         ),
