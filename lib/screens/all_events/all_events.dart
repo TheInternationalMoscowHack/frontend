@@ -38,21 +38,27 @@ import 'package:mos_ru_app/theme/app_colors.dart';
 //   ),
 
 //  boxEvents.get(i), i до 19
-List<Event> eventslist = [];
+
 Future<dynamic> allevents() async {
   var boxEvents = await Hive.openBox('Events');
   // var allEventsList = ;
   eventslist = [for (var i = 1; i < 20; i++) boxEvents.get(i)];
 }
 
+// List<Event> eventslist = [];
+
+List<Event> eventslist = allevents() as List<Event>;
+
 class AllEventsScreen extends StatelessWidget {
   const AllEventsScreen({
     Key? key,
   }) : super(key: key);
 
+  // print(eventslist[0].title);
+
   @override
   Widget build(BuildContext context) {
-    // Future<dynamic> eventslist = allevents();
+    // Future<dynamic> _ = await allevents();
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
@@ -85,6 +91,9 @@ class AllEventsScreen extends StatelessWidget {
                         ),
                         EventCard(event: eventslist[i]),
                         //eventslist[i],
+                        //  Event(
+                        //         image:
+                        //             'https://www.mos.ru//upload/newsfeed/events/imagesWRpb1x(3).jpg')
                         SizedBox(
                           height: 10,
                         ),
