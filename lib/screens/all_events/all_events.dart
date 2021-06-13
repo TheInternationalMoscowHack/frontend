@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mos_ru_app/screens/all_events/all_events.dart';
+import 'package:mos_ru_app/screens/common_widgets/event_card.dart';
 import 'package:mos_ru_app/screens/questions/widgets/answer_button.dart';
 import 'package:mos_ru_app/screens/common_widgets/magic_button.dart';
 import 'package:mos_ru_app/screens/common_widgets/rounded_button.dart';
@@ -9,8 +9,8 @@ import 'package:mos_ru_app/screens/start/widgets/logo_widget.dart';
 import 'package:mos_ru_app/screens/start/widgets/title_widget.dart';
 import 'package:mos_ru_app/theme/app_colors.dart';
 
-class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({
+class AllEventsScreen extends StatelessWidget {
+  const AllEventsScreen({
     Key? key,
   }) : super(key: key);
 
@@ -27,7 +27,13 @@ class WelcomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 SizedBox(
-                  height: 150,
+                  height: 50,
+                ),
+                EventCard(
+                  name: "Вечеринка у Децла",
+                ),
+                SizedBox(
+                  height: 50,
                 ),
                 MagicButton(
                   text: "Подбери события",
@@ -40,24 +46,6 @@ class WelcomeScreen extends StatelessWidget {
                     );
                   },
                 ),
-                SizedBox(
-                  height: 30,
-                ),
-                RoundedButton(
-                  text: "Покажи что есть",
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute<void>(
-                        builder: (_) => const AllEventsScreen(),
-                      ),
-                    );
-                  },
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                AnswerButton(text: "Вопрос 1"),
               ],
             ),
           ),
