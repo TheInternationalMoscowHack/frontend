@@ -42,23 +42,29 @@ import 'package:mos_ru_app/theme/app_colors.dart';
 Future<dynamic> allevents() async {
   var boxEvents = await Hive.openBox('Events');
   // var allEventsList = ;
-  eventslist = [for (var i = 1; i < 20; i++) boxEvents.get(i)];
+  eventslist = [for (var i = 0; i < 20; i++) boxEvents.get(i)];
+  return eventslist;
 }
 
 // List<Event> eventslist = [];
 
 List<Event> eventslist = allevents() as List<Event>;
+// careventslist = allevents() as List<Event>;
+
+Future sleep1() {
+  return new Future.delayed(const Duration(seconds: 1), () => "1");
+}
 
 class AllEventsScreen extends StatelessWidget {
   const AllEventsScreen({
     Key? key,
+    // List<Event>? eventslist_,
   }) : super(key: key);
-
+  // f();
   // print(eventslist[0].title);
 
   @override
   Widget build(BuildContext context) {
-    // Future<dynamic> _ = await allevents();
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
