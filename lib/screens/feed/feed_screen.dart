@@ -21,7 +21,7 @@ class FeedScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              EventCard(name: "Вечеринка у Децла"),
+              //EventCard(name: "Вечеринка у Децла"),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
