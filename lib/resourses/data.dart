@@ -63,9 +63,10 @@ Future<void> getUser() async {
 Future<void> getEvents() async {
   var boxEvents = await Hive.openBox('Events');
   if (boxEvents.isEmpty) {
-    // описываем метод получения данных пользователя
-    // var _event = [Event(), Event()];
-    // boxEvents.put(0, _event);
+    print("is Empty");
+    //   //   // описываем метод получения данных пользователя
+    //   //   // var _event = [Event(), Event()];
+    //   //   // boxEvents.put(0, _event);
   }
   final url = Uri.parse('https://events-hack.herokuapp.com/api/v1/events/1/');
   http.Response response = await http.get(url);
@@ -75,6 +76,7 @@ Future<void> getEvents() async {
   Map<String, dynamic> event = json.decode(utf8.decode(response.bodyBytes));
   print(event['results'].length);
   for (int i = 0; i < event['results'].length; i++) {
+    print("event $i");
     boxEvents.put(
         i,
         Event(

@@ -16,7 +16,7 @@ Future<void> main() async {
   Hive.registerAdapter(EventAdapter());
   // // Hive.registerAdapter(UserAdapter());
   await getUser();
-  // await getEvents();
+  await getEvents();
 
   // final url = Uri.parse('https://events-hack.herokuapp.com/api/v1/events/1/');
   // http.Response response = await http.get(url);
