@@ -27,8 +27,20 @@ class EventCard extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Image.asset(
-              AppPngIcons.event,
+            ClipRRect(
+              borderRadius: BorderRadius.circular(16),
+              child: AspectRatio(
+                aspectRatio: 604 / 412,
+                child: Container(
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          fit: BoxFit.fitWidth,
+                          alignment: FractionalOffset.topCenter,
+                          image: NetworkImage(
+                            'https://picsum.photos/250?image=9',
+                          ))),
+                ),
+              ),
             ),
             SizedBox(
               height: 10,
