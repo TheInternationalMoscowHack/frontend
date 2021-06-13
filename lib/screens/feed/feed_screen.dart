@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mos_ru_app/screens/common_widgets/event_card.dart';
 
 class FeedScreen extends StatelessWidget {
   const FeedScreen({
@@ -20,25 +21,7 @@ class FeedScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(
-                width: 300,
-                // height: 250,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(16),
-                  child: AspectRatio(
-                    aspectRatio: 604 / 412,
-                    child: Container(
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              fit: BoxFit.fitWidth,
-                              alignment: FractionalOffset.topCenter,
-                              image: NetworkImage(
-                                'https://picsum.photos/250?image=9',
-                              ))),
-                    ),
-                  ),
-                ),
-              ),
+              EventCard(name: "Вечеринка у Децла"),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
