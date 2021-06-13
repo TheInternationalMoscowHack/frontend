@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mos_ru_app/screens/common_widgets/answer_button.dart';
 import 'package:mos_ru_app/screens/common_widgets/magic_button.dart';
 import 'package:mos_ru_app/screens/common_widgets/rounded_button.dart';
+import 'package:mos_ru_app/screens/questions/question1_screen.dart';
 import 'package:mos_ru_app/screens/start/widgets/circular_indicator.dart';
 import 'package:mos_ru_app/screens/start/widgets/logo_widget.dart';
 import 'package:mos_ru_app/screens/start/widgets/title_widget.dart';
@@ -28,6 +30,14 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 MagicButton(
                   text: "Подбери события",
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute<void>(
+                        builder: (_) => const Question1Screen(),
+                      ),
+                    );
+                  },
                 ),
                 SizedBox(
                   height: 30,
@@ -35,6 +45,10 @@ class WelcomeScreen extends StatelessWidget {
                 RoundedButton(
                   text: "Покажи что есть",
                 ),
+                SizedBox(
+                  height: 30,
+                ),
+                AnswerButton(text: "Вопрос 1"),
               ],
             ),
           ),
