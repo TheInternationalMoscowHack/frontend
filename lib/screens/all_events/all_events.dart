@@ -42,7 +42,7 @@ List<Event> eventslist = [];
 Future<dynamic> allevents() async {
   var boxEvents = await Hive.openBox('Events');
   // var allEventsList = ;
-  eventslist = [for (var i = 0; i < 20; i++) boxEvents.get(i)];
+  eventslist = [for (var i = 1; i < 20; i++) boxEvents.get(i)];
 }
 
 class AllEventsScreen extends StatelessWidget {
@@ -83,7 +83,8 @@ class AllEventsScreen extends StatelessWidget {
                         SizedBox(
                           height: 10,
                         ),
-                        eventslist[i].image,
+                        EventCard(event: eventslist[i]),
+                        //eventslist[i],
                         SizedBox(
                           height: 10,
                         ),
