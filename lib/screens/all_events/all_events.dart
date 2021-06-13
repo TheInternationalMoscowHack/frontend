@@ -39,21 +39,21 @@ import 'package:mos_ru_app/theme/app_colors.dart';
 
 //  boxEvents.get(i), i до 19
 
-Future<dynamic> allevents() async {
-  var boxEvents = await Hive.openBox('Events');
-  // var allEventsList = ;
-  eventslist = [for (var i = 0; i < 20; i++) boxEvents.get(i)];
-  return eventslist;
-}
+// Future<dynamic> allevents() async {
+//   var boxEvents = await Hive.openBox('Events');
+//   // var allEventsList = ;
+//   eventslist = [for (var i = 0; i < 20; i++) boxEvents.get(i)];
+//   return eventslist;
+// }
 
-// List<Event> eventslist = [];
+// // List<Event> eventslist = [];
 
-List<Event> eventslist = allevents() as List<Event>;
-// careventslist = allevents() as List<Event>;
+// List<Event> eventslist = allevents() as List<Event>;
+// // careventslist = allevents() as List<Event>;
 
-Future sleep1() {
-  return new Future.delayed(const Duration(seconds: 1), () => "1");
-}
+// Future sleep1() {
+//   return new Future.delayed(const Duration(seconds: 1), () => "1");
+// }
 
 class AllEventsScreen extends StatelessWidget {
   const AllEventsScreen({
@@ -65,6 +65,7 @@ class AllEventsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var box = Hive.box('Events');
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
@@ -95,7 +96,7 @@ class AllEventsScreen extends StatelessWidget {
                         SizedBox(
                           height: 10,
                         ),
-                        EventCard(event: eventslist[i]),
+                        EventCard(event: box.get(i)),
                         //eventslist[i],
                         //  Event(
                         //         image:

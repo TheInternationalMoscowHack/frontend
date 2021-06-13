@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hive/hive.dart';
 import "package:hive_flutter/hive_flutter.dart";
+import 'package:mos_ru_app/resourses/back.dart';
 import 'dart:math';
 
 import 'package:mos_ru_app/screens/start/start_screen.dart';
@@ -18,6 +19,7 @@ Future<void> main() async {
   await getUser();
   await getEvents();
 
+  await sendThree(10, 'Центральный', '%2021-%01-%11', 'с детьми');
   // final url = Uri.parse('https://events-hack.herokuapp.com/api/v1/events/1/');
   // http.Response response = await http.get(url);
   // print('Status code: ${response.statusCode}');
