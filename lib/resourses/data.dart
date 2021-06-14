@@ -7,7 +7,11 @@ part 'data.g.dart';
 
 @HiveType(typeId: 0)
 class User {
-  User({this.id = 0, this.token = 'a', this.answer = 'a'});
+  User(
+      {this.id = 0,
+      this.token = 'a',
+      this.answer = 'a',
+      this.progress = const [0, 0, 0, 0, 0]});
 
   @HiveField(0)
   int id;
@@ -17,6 +21,9 @@ class User {
 
   @HiveField(2)
   String answer;
+
+  @HiveField(3)
+  List<int> progress;
 }
 
 // локация и время фотка название и описание
@@ -48,25 +55,17 @@ class Event {
 
 Future<void> getUser() async {
   var boxUser = await Hive.openBox('User');
-  // boxUser.deleteFromDisk();
   if (boxUser.isEmpty) {
-    //   // описываем метод получения данных пользователя
     var rng = new Random();
     var _person = User(id: rng.nextInt(10000), token: 'glavniy');
     boxUser.put('user', _person);
   }
-  // // boxUser.clear();
-  print('user start: ${boxUser.get('user').id}');
-  // // boxUser.clear();
 }
 
 Future<void> getEvents() async {
   var boxEvents = await Hive.openBox('Events');
   if (boxEvents.isEmpty) {
     print("is Empty");
-    //   //   // описываем метод получения данных пользователя
-    //   //   // var _event = [Event(), Event()];
-    //   //   // boxEvents.put(0, _event);
   }
   final url = Uri.parse('https://events-hack.herokuapp.com/api/v1/events/1/');
   http.Response response = await http.get(url);
@@ -96,76 +95,3 @@ Future<void> getEvents() async {
   // print(parsed);
   // print(jsonDecode(res.body));
 }
-
-// Future<http.Response> fetchAlbum(List params) {
-//   return http.get(Uri.parse(
-//       'https://events-hack.herokuapp.com/api/v1/events/${params[0]}/'));
-// }
-
-// Future<Album> fetchAlbum() async {
-//   final response = await http
-//       .get(Uri.parse('https://jsonplaceholder.typicode.com/albums/1'));
-
-//   if (response.statusCode == 200) {
-//     // If the server did return a 200 OK response,
-//     // then parse the JSON.
-//     return Album.fromJson(jsonDecode(response.body));
-//   } else {
-//     // If the server did not return a 200 OK response,
-//     // then throw an exception.
-//     throw Exception('Failed to load album');
-//   }
-// }
-
-// class Album {
-//   final int userId;
-//   final int id;
-//   final String title;
-
-//   Album({
-//     required this.userId,
-//     required this.id,
-//     required this.title,
-//   });
-
-//   factory Album.fromJson(Map<String, dynamic> json) {
-//     return Album(
-//       userId: json['userId'],
-//       id: json['id'],
-//       title: json['title'],
-//     );
-//   }
-// }
-
-// {'count': 1,
-//  'next': None,
-//  'previous': None,
-//  'results': [{'title': 'Концерт в парке',
-//    'description': 'Интересный концерт в парке',
-//    'image': 'https://events-hack.herokuapp.com/media/event_images/2021-06-13_12-11-12.png',
-//    'spot_name': 'ЦПКиО',
-//    'address': 'ул. Пушкина',
-//    'is_free': False,
-//    'date_from': '2021-06-01T18:00:00Z',
-//    'date_to': '2021-06-30T18:00:00Z',
-//    'restriction': 6,
-//    'district_name': 'Центральный',
-//    'spheres': [{'id': 1,
-//      'sphere_name': 'Спектакли',
-//      'created_at': '2021-06-13T11:08:56.859725Z',
-//      'modified_at': '2021-06-13T11:08:56.859725Z'}],
-//    'themes': [{'id': 1,
-//      'theme_name': 'События в парках',
-//      'created_at': '2021-06-13T11:10:30.234704Z',
-//      'modified_at': '2021-06-13T11:10:30.235739Z'}]}]}
-
-// class EventResponse {
-//   int count;
-//   String next;
-//   String previous;
-//   Data results;
-// }
-
-// class Results 0-
-
-// локация и время фотка название и описание

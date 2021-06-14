@@ -11,57 +11,11 @@ import 'package:mos_ru_app/screens/start/widgets/logo_widget.dart';
 import 'package:mos_ru_app/screens/start/widgets/title_widget.dart';
 import 'package:mos_ru_app/theme/app_colors.dart';
 
-// final List<EventCard> questionsList = [
-//   EventCard(
-//     name: "Вечеринка у Децла",
-//   ),
-//   EventCard(
-//     name: "Вечеринка у Децла",
-//   ),
-//   EventCard(
-//     name: "Вечеринка у Децла",
-//   ),
-//   EventCard(
-//     name: "Вечеринка у Децла",
-//   ),
-//   EventCard(
-//     name: "Вечеринка у Децла",
-//   ),
-//   EventCard(
-//     name: "Вечеринка у Децла",
-//   ),
-//   EventCard(
-//     name: "Вечеринка у Децла",
-//   ),
-//   EventCard(
-//     name: "Вечеринка у Децла",
-//   ),
-
-//  boxEvents.get(i), i до 19
-
-// Future<dynamic> allevents() async {
-//   var boxEvents = await Hive.openBox('Events');
-//   // var allEventsList = ;
-//   eventslist = [for (var i = 0; i < 20; i++) boxEvents.get(i)];
-//   return eventslist;
-// }
-
-// // List<Event> eventslist = [];
-
-// List<Event> eventslist = allevents() as List<Event>;
-// // careventslist = allevents() as List<Event>;
-
-// Future sleep1() {
-//   return new Future.delayed(const Duration(seconds: 1), () => "1");
-// }
-
 class AllEventsScreen extends StatelessWidget {
   const AllEventsScreen({
     Key? key,
     // List<Event>? eventslist_,
   }) : super(key: key);
-  // f();
-  // print(eventslist[0].title);
 
   @override
   Widget build(BuildContext context) {
@@ -97,10 +51,6 @@ class AllEventsScreen extends StatelessWidget {
                           height: 10,
                         ),
                         EventCard(event: box.get(i)),
-                        //eventslist[i],
-                        //  Event(
-                        //         image:
-                        //             'https://www.mos.ru//upload/newsfeed/events/imagesWRpb1x(3).jpg')
                         SizedBox(
                           height: 10,
                         ),

@@ -20,6 +20,8 @@ Future<void> main() async {
   await getEvents();
 
   await sendThree(10, 'Центральный', '%2021-%01-%11', 'с детьми');
+  await getQuestion(10);
+  Map<String, dynamic> q = await getQuestion(1);
   // final url = Uri.parse('https://events-hack.herokuapp.com/api/v1/events/1/');
   // http.Response response = await http.get(url);
   // print('Status code: ${response.statusCode}');

@@ -67,12 +67,15 @@ class EventCard extends StatelessWidget {
                   width: 5,
                 ),
                 Text(
-                  event.location,
+                  // event.location,
+                  event.location.length > 30
+                      ? event.location.substring(1, 28) + ".."
+                      : event.location,
                   style: AppTextStyles.carddetails,
                 ),
                 Spacer(),
                 Text(
-                  event.time,
+                  event.time.substring(1, 10),
                   style: AppTextStyles.carddetails,
                 ),
                 SizedBox(
