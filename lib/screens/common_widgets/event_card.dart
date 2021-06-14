@@ -69,13 +69,13 @@ class EventCard extends StatelessWidget {
                 Text(
                   // event.location,
                   event.location.length > 30
-                      ? event.location.substring(1, 28) + ".."
+                      ? event.location.substring(0, 28) + ".."
                       : event.location,
                   style: AppTextStyles.carddetails,
                 ),
                 Spacer(),
                 Text(
-                  event.time.substring(1, 10),
+                  event.time.substring(0, 10),
                   style: AppTextStyles.carddetails,
                 ),
                 SizedBox(
