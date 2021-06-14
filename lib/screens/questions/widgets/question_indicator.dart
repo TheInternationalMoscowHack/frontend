@@ -4,10 +4,10 @@ import 'package:mos_ru_app/theme/app_colors.dart';
 import 'package:mos_ru_app/theme/app_text_styles.dart';
 
 final List<String> questionsList = [
-  'Кто вы?',
-  'Куда вы?',
-  'Как вы?',
-  'Финал',
+  'Место',
+  'Дата',
+  'Категория',
+  'И ещё...',
 ];
 
 class QuestionIndicator extends StatelessWidget {
@@ -51,7 +51,7 @@ class QuestionIndicator extends StatelessWidget {
                                 ], // ПОТОМ ПРОПИСАТЬ!!!
                                 progress: [
                                   1,
-                                  1,
+                                  0,
                                   0,
                                   0,
                                 ] //progress,

@@ -26,11 +26,13 @@ class WelcomeScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
+                LogoWidget(),
+                TitleWidget(),
                 SizedBox(
-                  height: 150,
+                  height: 100,
                 ),
                 MagicButton(
-                  text: "Подбери события",
+                  text: "Подберите события для меня!",
                   onTap: () {
                     Navigator.push(
                       context,
@@ -44,7 +46,7 @@ class WelcomeScreen extends StatelessWidget {
                   height: 30,
                 ),
                 RoundedButton(
-                  text: "Покажи что есть",
+                  text: "Покажите, что происходит в Москве",
                   onTap: () {
                     Navigator.push(
                       context,

@@ -35,7 +35,7 @@ class StartScreen extends StatelessWidget {
                 CircularIndicatorWidget(),
                 SizedBox(height: 45.0),
                 MagicButton(
-                  text: "Погнали",
+                  text: "Начнём",
                   onTap: () {
                     Navigator.push(
                       context,

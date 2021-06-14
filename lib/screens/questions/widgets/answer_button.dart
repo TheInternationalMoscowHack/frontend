@@ -47,9 +47,6 @@ class _AnswerButtonState extends State<AnswerButton> {
     });
   }
 
-// Record  recordObject
-//  _RecordPageState(this. recordObject);
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

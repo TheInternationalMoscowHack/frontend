@@ -85,7 +85,7 @@ class AppTextStyles {
       // lnum
       FontFeature.liningFigures(),
     ],
-    color: AppColors.lightlightGray,
+    color: AppColors.middlelightGray,
   );
 
   static const TextStyle current_question = TextStyle(

@@ -38,42 +38,42 @@ class Question1Screen extends StatelessWidget {
                 QuestionIndicator(
                   currentNumber: 0,
                   totalNumber: 4,
-                  progress: [0, 1, 0, 1],
+                  progress: [0, 0, 1, 0],
                 ),
                 SizedBox(
                   height: 5,
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 40,
                 ),
                 Text(
-                  "Тут мы спрашиваем первый вопрос",
+                  "Какой район Вас интересует?",
                   style: AppTextStyles.questionbig,
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 40,
                 ),
                 AnswerButton(
-                  text: "Вопрос 1",
+                  text: "Центр",
                   number: 1,
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
                 AnswerButton(
-                  text: "Вопрос 2",
+                  text: "За Садовым",
                   number: 2,
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
                 AnswerButton(
-                  text: "Вопрос 3",
+                  text: "Окраины",
                   number: 3,
                 ),
                 SizedBox(
-                  height: 50,
+                  height: 20,
                 ),
                 Row()
               ],
