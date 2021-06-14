@@ -29,7 +29,7 @@ class MagicButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width: 570,
-        height: 50,
+        height: 80,
         decoration: BoxDecoration(
           color: color ?? AppColors.redMain,
           borderRadius: BorderRadius.all(

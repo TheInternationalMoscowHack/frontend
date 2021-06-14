@@ -12,6 +12,6 @@ class AppColors {
 
   static const actGray = Color(0xFF9196A0);
   static const lightlightGray = Color(0xFFF8F8F8);
-
+  static const middlelightGray = Color(0xFFa0a0a0);
   const AppColors._();
 }

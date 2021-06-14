@@ -11,9 +11,18 @@ import 'package:mos_ru_app/screens/start/widgets/title_widget.dart';
 import 'package:mos_ru_app/theme/app_colors.dart';
 import 'package:mos_ru_app/theme/app_text_styles.dart';
 
-class Question1Screen extends StatelessWidget {
-  const Question1Screen({
+class QuestionScreen extends StatelessWidget {
+  final List<int> progress;
+  final int current_number;
+  final String current_question;
+  final List<String> current_variants;
+
+  const QuestionScreen({
     Key? key,
+    required this.progress,
+    required this.current_question,
+    required this.current_variants,
+    required this.current_number,
   }) : super(key: key);
 
   @override
@@ -36,44 +45,43 @@ class Question1Screen extends StatelessWidget {
                   height: 10,
                 ),
                 QuestionIndicator(
-                  currentNumber: 0,
-                  totalNumber: 4,
-                  progress: [0, 0, 1, 0],
-                ),
+                    progress: progress,
+                    currentNumber: current_number,
+                    totalNumber: 4),
                 SizedBox(
                   height: 5,
                 ),
                 SizedBox(
-                  height: 40,
+                  height: 10,
                 ),
                 Text(
-                  "Какой район Вас интересует?",
+                  current_question,
                   style: AppTextStyles.questionbig,
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(
-                  height: 40,
+                  height: 10,
                 ),
                 AnswerButton(
-                  text: "Центр",
+                  text: current_variants[0],
                   number: 1,
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 AnswerButton(
-                  text: "За Садовым",
+                  text: current_variants[1],
                   number: 2,
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 AnswerButton(
-                  text: "Окраины",
+                  text: current_variants[2],
                   number: 3,
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 50,
                 ),
                 Row()
               ],
