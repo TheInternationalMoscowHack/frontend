@@ -74,6 +74,20 @@ class AppTextStyles {
     color: AppColors.lightGray,
   );
 
+  static const TextStyle other_question_not_selected = TextStyle(
+    fontFamily: 'Helvetica',
+    //fontStyle: FontStyle.normal,
+    fontWeight: FontWeight.w400,
+    fontSize: 17.0,
+    fontFeatures: <FontFeature>[
+      // pnum
+      FontFeature.proportionalFigures(),
+      // lnum
+      FontFeature.liningFigures(),
+    ],
+    color: AppColors.lightlightGray,
+  );
+
   static const TextStyle current_question = TextStyle(
     fontFamily: 'Helvetica',
     fontStyle: FontStyle.normal,

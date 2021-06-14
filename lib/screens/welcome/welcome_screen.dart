@@ -57,7 +57,7 @@ class WelcomeScreen extends StatelessWidget {
                 SizedBox(
                   height: 30,
                 ),
-                AnswerButton(text: "Вопрос 1"),
+                //AnswerButton(text: "Вопрос 1"),
               ],
             ),
           ),
